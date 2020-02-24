@@ -23,7 +23,61 @@
     }
 
 
-    public void viewcontact(LinkedList1 linkedList1) {
+    ppackage MyContactList;
+        import myLinkedListOperation.myLinkedList;
+        import person.myperson;
+        import java.util.Scanner;
+        import java.util.LinkedList;
+
+        public class myTasks {
+            Scanner sc = new Scanner(Sytem.in);
+            LinkedList<String> linkedList = new LinkedList<>();
+
+
+
+            public void addContact(myLinkedList linkedList){
+                System.out.println("you have to choosen to add a new contact: \n"+
+                        "please enter the name of the person");
+                System.out.println("FirstName :");
+                String FirstName sc.nextLine().trim();
+                while(true){
+                    if (FirstName.matches("[A-Za-z")){
+                        break ;
+                    }
+                    else{
+                        System.out.println("please enter correct name");
+                    }
+                    FirstName = sc.nextLine().trim();
+                }
+                System.out.println("contact Number :");
+                while(true){
+                    string contact = sc.nextLine().trim();
+                    if(contact.matches("[0-9]{10}")) {
+                        linkedList.add(contact);
+                        break;
+                    }
+                }
+                while(true)
+                {
+                    System.out.println("would you like to add another contact number ?(y/n) :");
+                    char choice = sc.next().charAt(0);
+                    if(choice == 'y'){
+                        System.out.println("contact Number: ");
+                        String contactNumber1 = sc.nextLine().trim();
+                        while(true){
+                            if(contactNumber1.matches("[0-9]{10}")) {
+                                linkedList.add(contactNumber1);
+                                break;
+                            }
+                            else{
+                                System.out.println("add correct number");
+                            }
+                        }
+                    }
+                    else{
+                        break;
+                    }
+                }ublic void viewcontact(LinkedList1 linkedList1) {
 
         System.out.println("---Here are all your contacts---");
 
